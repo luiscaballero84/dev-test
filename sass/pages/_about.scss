@@ -24,10 +24,20 @@
 .container-about {
   grid-column: center-start / center-end;
 
-  font-size: #{"min(max(1.6rem, 3.8vw), 2.2rem)"};
-  line-height: #{"min(max(3rem, 4vw), 3.4rem)"};
+  // font-size: #{"min(max(1.6rem, 3.8vw), 2.2rem)"};
+  // line-height: #{"min(max(3rem, 4vw), 3.4rem)"};
 
   @include respond(mobile) { font-weight: 400; }
+
+  // fluid type mixin
+
+  $min_width: 32rem;
+  $max_width: 120rem;
+  $min_font: 1.8rem;
+  $max_font: 2.2rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  line-height: 155%;
 }
 
 .about-title {
@@ -45,7 +55,17 @@
 h3 {
   padding-bottom: 1rem;
   font-weight: 400;
-  font-size: #{"min(max(2rem, 3.8vw), 2.8rem)"};
+  // font-size: #{"min(max(2rem, 3.8vw), 2.8rem)"};
+
+  // mixin fluid type
+  $min_width: 32rem;
+  $max_width: 120rem;
+  $min_font: 2.2rem;
+  $max_font: 2.8rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  // line-height: 155%;
+
 }
 
 // Content Grid
@@ -122,8 +142,16 @@ h3 {
 
 .skill-icon {
   font-size: 7rem;
-  font-size: #{"min(max(5rem, 3.8vw), 7rem)"};
+  // font-size: #{"min(max(5rem, 3.8vw), 7rem)"};
   color: $grey;
+
+  $min_width: 32rem;
+  $max_width: 120rem;
+  $min_font: 4rem;
+  $max_font: 6rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
 }
 
 .border-bottom {

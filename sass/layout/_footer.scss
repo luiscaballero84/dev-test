@@ -4,10 +4,19 @@
   padding: 30px 0px;
   font-weight: 400;
   // fluid type
-  font-size: #{ "min(max(1.6rem, 4vw), 2.5rem)" };
-  font-size: #{"min(max(1.6rem, 3.8vw), 2.2rem)"};
+  // font-size: #{ "min(max(1.6rem, 4vw), 2.5rem)" };
+  // font-size: #{"min(max(1.6rem, 3.8vw), 2.2rem)"};
+
+  //fluid type mixin
+  $min_width: 32rem;
+  $max_width: 120rem;
+  $min_font: 1.8rem;
+  $max_font: 2.2rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
   // line-height: #{"min(max(3rem, 4vw), 3.4rem)"};
-  line-height: 4rem;
+  // line-height: 4rem;
   background-color: $primary;
 }
 
@@ -18,8 +27,15 @@
 }
 
 .footer-icons {
-  font-size: #{ "min(max(2.5rem, 4vw), 3rem)" };
+  // font-size: #{ "min(max(2.5rem, 4vw), 3rem)" };
   color: $black;
+
+  $min_width: 32rem;
+  $max_width: 120rem;
+  $min_font: 2.5rem;
+  $max_font: 3rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
 
   a:hover { color: $white; }
 }
