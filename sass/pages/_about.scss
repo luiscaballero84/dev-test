@@ -24,9 +24,6 @@
 .container-about {
   grid-column: center-start / center-end;
 
-  // font-size: #{"min(max(1.6rem, 3.8vw), 2.2rem)"};
-  // line-height: #{"min(max(3rem, 4vw), 3.4rem)"};
-
   @include respond(mobile) { font-weight: 400; }
 
   // fluid type mixin
@@ -44,7 +41,14 @@
   padding-bottom: 1rem;
   margin-bottom: 6rem;
   font-weight: 400;
-  font-size: #{"min(max(2.6rem, 3.8vw), 3.8rem)"};
+  // font-size: #{"min(max(2.6rem, 3.8vw), 3.8rem)"};
+
+  $min_width: 32rem;
+  $max_width: 120rem;
+  $min_font: 3rem;
+  $max_font: 3.8rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
   border-bottom: 2px solid $white-dark;
 }
 

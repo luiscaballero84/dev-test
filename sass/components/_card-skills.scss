@@ -5,14 +5,12 @@
   border-radius: 5px;
   background-color: $white-light;
   box-shadow: 1px 1px 7px rgba($white-dark,.4);
-}
 
-@media all and (max-width: 760px) {
-
-  .card-skills {
+  @include respond(tablet-land) {
     max-width: 40rem;
     min-width: 32rem;
     margin: 0 auto;
     margin-bottom: 3rem;
   }
 }
+
