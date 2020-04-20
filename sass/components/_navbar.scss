@@ -6,7 +6,16 @@
   align-items: center;
 
   font-weight: 300;
-  font-size: #{"min(max(3.8rem, 4vw), 6.5rem)"};
+
+  // font-size: #{"min(max(3.8rem, 4vw), 6.5rem)"};
+
+  // fluid type mixin
+  $min_width: 32rem;
+  $max_width: 110rem;
+  $min_font: 3.8rem;
+  $max_font: 5.2rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
 .logo {
@@ -71,7 +80,7 @@
   display: block;
   height: 4px;
   width: 100%;
-  margin-top: 3.5%;
+  //margin-top: 2%;
 
   background-color: $black;
   border-radius: 5px;

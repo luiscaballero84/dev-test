@@ -34,8 +34,16 @@ body {
   font-weight: 300;
 
   // fluid type & line-height
-  font-size: #{"min(max(2.8rem, 4vw), 5rem)"};
-  line-height: #{"min(max(3.2rem, 4.5vw), 5.8rem)"};
+  //font-size: #{"min(max(2.8rem, 4vw), 5rem)"};
+  $min_width: 32rem;
+  $max_width: 120rem;
+  $min_font: 2.8rem;
+  $max_font: 4.5rem;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  line-height: 125%;
+
+  //line-height: #{"min(max(3.2rem, 4.5vw), 5.8rem)"};
   color: $black;
   background-color: $white;
 }
