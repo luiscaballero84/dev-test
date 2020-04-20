@@ -242,13 +242,12 @@ h3 {
   border-radius: 5px;
   background-color: #fffcfe;
   box-shadow: 1px 1px 7px rgba(240, 240, 240, 0.4); }
-
-@media all and (max-width: 760px) {
-  .card-skills {
-    max-width: 40rem;
-    min-width: 32rem;
-    margin: 0 auto;
-    margin-bottom: 3rem; } }
+  @media only screen and (max-width: 47.5em) {
+    .card-skills {
+      max-width: 40rem;
+      min-width: 32rem;
+      margin: 0 auto;
+      margin-bottom: 3rem; } }
 
 .btn-line {
   width: 100%;
@@ -357,8 +356,15 @@ h3 {
   padding-bottom: 1rem;
   margin-bottom: 6rem;
   font-weight: 400;
-  font-size: min(max(2.6rem, 3.8vw), 3.8rem);
   border-bottom: 2px solid #f0f0f0; }
+  .about-title {
+    font-size: 3rem; }
+    @media screen and (min-width: 32rem) {
+      .about-title {
+        font-size: calc(3rem + 0.8 * ((100vw - 32rem) / 88)); } }
+    @media screen and (min-width: 120rem) {
+      .about-title {
+        font-size: 3.8rem; } }
 
 h3 {
   padding-bottom: 1rem;
