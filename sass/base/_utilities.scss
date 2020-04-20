@@ -1,0 +1,28 @@
+//
+// Margins
+//
+
+//Margin top
+.mt-l { margin-top: $margin-l; }
+
+.mt-m { margin-top: $margin-m; }
+
+//Margin bottom
+.mb-xl { margin-bottom: $margin-xl; }
+
+.mb-l { margin-bottom: $margin-l; }
+
+.mb-m { margin-bottom: $margin-m; }
+
+.mb-s { margin-bottom: $margin-s; }
+
+.mb-xs { margin-bottom: $margin-xs; }
+
+
+//
+// Text colors
+//
+
+.text-primary {
+  color: $primary;
+}

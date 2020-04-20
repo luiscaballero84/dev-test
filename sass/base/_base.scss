@@ -1,0 +1,41 @@
+// Basic Override
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// default links
+a { color: $black; }
+
+a:hover { color: $primary; }
+
+// default unordered list
+ul { list-style-type: none; }
+
+// default h1 & p
+h1,
+p { margin: 0; }
+
+
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $font-primary;
+  font-weight: 300;
+
+  // fluid type & line-height
+  font-size: #{"min(max(2.8rem, 4vw), 5rem)"};
+  line-height: #{"min(max(3.2rem, 4.5vw), 5.8rem)"};
+  color: $black;
+  background-color: $white;
+}

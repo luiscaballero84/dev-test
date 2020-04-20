@@ -1,0 +1,53 @@
+.header {
+  position: relative;
+  grid-column: center-start / center-end;
+  border-bottom: .8rem solid $primary;
+}
+
+// let you the border bottom full bleed
+.header:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: -.8rem;
+  left: -100vw;
+  right: -100vw;
+  border-bottom: inherit;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+  text-align: center;
+}
+
+.header-circle {
+  position: absolute;
+  left: 50%;
+  margin-left: -2.5rem;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 5rem;
+  padding-bottom: .8rem;
+  border-top-left-radius: 5rem * 2;
+  border-top-right-radius: 5rem * 2;
+  background-color: $primary;
+
+  a:hover { color: $white; }
+}
+
+.arrow-icon {
+  position: absolute;
+  left: 50%;
+  margin-left: -.8rem;
+  font-size: 2rem;
+}

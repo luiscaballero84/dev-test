@@ -1,0 +1,131 @@
+// General Grid
+//
+
+.grid-about {
+  margin: 0px auto;
+  display: grid;
+
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(4rem, 1fr) [full-end];
+
+  @include respond(mobile) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(2rem, 1fr) [full-end];
+  }
+
+  grid-template-rows: 20vh 1fr 15rem;
+}
+
+
+.container-about {
+  grid-column: center-start / center-end;
+
+  font-size: #{"min(max(1.6rem, 3.8vw), 2.2rem)"};
+  line-height: #{"min(max(3rem, 4vw), 3.4rem)"};
+
+  @include respond(mobile) { font-weight: 400; }
+}
+
+.about-title {
+  padding-bottom: 1rem;
+  margin-bottom: 6rem;
+  font-weight: 400;
+  font-size: #{"min(max(2.6rem, 3.8vw), 3.8rem)"};
+  border-bottom: 2px solid $white-dark;
+}
+
+//
+// Content Part s(text + pic)
+//
+
+h3 {
+  padding-bottom: 1rem;
+  font-weight: 400;
+  font-size: #{"min(max(2rem, 3.8vw), 2.8rem)"};
+}
+
+// Content Grid
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3rem;
+
+  @include respond(desktop-small) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(tablet-land) {
+   grid-template-columns: 1fr;
+  }
+}
+
+.about-content-text {
+  grid-column: 1 / span 3;
+
+  @include respond(desktop-small) {
+    grid-column: 1 / span 2;
+  }
+
+  @include respond(tablet-land) {
+    grid-column: 1 / span 1;
+  }
+}
+
+.about-content-photo {
+  // justify-self: center;
+
+  @include respond(tablet-land) {
+    grid-row-start: 1;
+    margin-bottom: 3rem;
+  }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 1px 1px 7px rgba($white-dark,.4);
+
+      @include respond(tablet-land) {
+        width: 50%;
+      }
+    }
+}
+
+
+//
+// CARDS Skills Part
+//
+
+// Skills Grid
+
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+
+  @include respond(tablet-land) {
+    grid-template-columns: 1fr;
+  }
+
+  margin-top: 8rem;
+  text-align: center;
+
+  // Line inside the skill card
+  ul li:first-child {
+    padding-top: 2rem;
+    border-top: 1px solid $white-dark;
+  }
+}
+
+.skill-icon {
+  font-size: 7rem;
+  font-size: #{"min(max(5rem, 3.8vw), 7rem)"};
+  color: $grey;
+}
+
+.border-bottom {
+  border-bottom: 2px solid $grey;
+}

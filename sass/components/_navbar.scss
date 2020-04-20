@@ -1,0 +1,128 @@
+.navbar {
+  grid-column: center-start / center-end;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 300;
+  font-size: #{"min(max(3.8rem, 4vw), 6.5rem)"};
+}
+
+.logo {
+  height: 9rem;
+  width: 9rem;
+  fill:#252322; //$black
+
+  @include respond(mobile) {
+    height: 8rem;
+    width: 8rem;
+  }
+}
+
+.logo:hover { fill:#be79df; }
+
+.sub-nav {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $primary;
+
+  transform: translateY(-100%);
+  transition: transform .3s ease-in;
+}
+
+// line height for the subnav elements
+.sub-nav li {
+  height: 15%;
+  opacity: 0;
+
+  @include respond(desktop-big) { height: 10%; }
+}
+
+.nav-links { color: $black; }
+
+.nav-links:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+// Links
+
+.line-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+// line under the links
+.line-link::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin-top: 3.5%;
+
+  background-color: $black;
+  border-radius: 5px;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease;
+
+  @include respond(desktop-big) { height: 3px; }
+}
+
+.line-link:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+// BURGER ICON
+
+//burger icon container
+.burger {
+  z-index: 1030;
+  display: block;
+  cursor: pointer;
+}
+
+//the 3 lines of the burger
+.burger div {
+  height: 0.3rem;
+  width: 2.5rem;
+  margin-top: 0.5rem;
+  background-color: $black;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-active { transform: translateY(0%); }
+
+.hidden {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.burger-line .line1 {
+  background-color: $black;
+  transform: rotate(-45deg) translate(-0.5rem,0.6rem);
+}
+
+.burger-line .line2 { opacity: 0; }
+
+.burger-line .line3 {
+  background-color: $black;
+  transform: rotate(45deg) translate(-0.5rem,-0.6rem);
+}
