@@ -17,6 +17,6 @@
   grid-template-rows: 20vh 80vh 15rem;
 
   @include respond(tablet-port) {
-    grid-template-rows: 20% 80% 15rem;
+    grid-template-rows: 20% 90% 15rem;
   }
 }
