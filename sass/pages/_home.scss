@@ -7,14 +7,16 @@
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(4rem, 1fr) [full-end];
 
-  grid-template-rows: 20vh 80vh 15rem;
-}
-
-@media all and (max-width: 535px) {
-  .grid {
+  @include respond(tablet-port) {
     grid-template-columns:
-      [full-start] minmax(2rem, 1fr)
-      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-      [center-end] minmax(2rem, 1fr) [full-end];
+    [full-start] minmax(2rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(2rem, 1fr) [full-end];
+  }
+
+  grid-template-rows: 20vh 80vh 15rem;
+
+  @include respond(tablet-port) {
+    grid-template-rows: 20% 80% 15rem;
   }
 }
