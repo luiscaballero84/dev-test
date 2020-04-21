@@ -77,7 +77,6 @@ h3 {
   margin-bottom: 1.5rem; }
 
 .text-primary {
-
   color: #e56378; }
 
 .navbar {
@@ -118,9 +117,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-color: #e56378;
-
   transform: translateY(-100%);
   transition: transform .3s ease-in; }
 
@@ -194,7 +191,6 @@ h3 {
 .header {
   position: relative;
   grid-column: center-start / center-end;
-
   border-bottom: 0.8rem solid #e56378; }
 
 .header:before {
@@ -229,9 +225,7 @@ h3 {
   padding-bottom: .8rem;
   border-top-left-radius: 10rem;
   border-top-right-radius: 10rem;
-
   background-color: #e56378; }
-
   .header-circle a:hover {
     color: #fcfcfc; }
 
@@ -266,10 +260,8 @@ h3 {
   padding-bottom: 1rem;
   text-decoration: none;
   text-align: center;
-
   color: #e56378;
   border: 2px solid #e56378;
-
   border-radius: .5rem; }
   @media only screen and (max-width: 47.5em) {
     .btn-line {
@@ -279,9 +271,7 @@ h3 {
     font-size: 3rem; }
   .btn-line:hover {
     color: #fcfcfc;
-
     background-color: #e56378; }
-
   .btn-line:hover .btn-line-icon {
     color: #fcfcfc; }
 
@@ -290,9 +280,7 @@ h3 {
   grid-column: center-start / center-end;
   padding: 30px 0px;
   font-weight: 400;
-
   background-color: #e56378; }
-
   .footer {
     font-size: 1.8rem; }
     @media screen and (min-width: 32rem) {
@@ -340,9 +328,7 @@ h3 {
       grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; } }
   @media only screen and (max-width: 39.3em) {
     .grid {
-
       grid-template-rows: 20% 90% 15rem; } }
-
 
 .grid-about {
   margin: 0px auto;
