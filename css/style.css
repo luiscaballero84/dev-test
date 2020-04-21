@@ -328,7 +328,7 @@ h3 {
       grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; } }
   @media only screen and (max-width: 39.3em) {
     .grid {
-      grid-template-rows: 20% 80% 15rem; } }
+      grid-template-rows: 20% 70% 15rem; } }
 
 .grid-about {
   margin: 0px auto;
